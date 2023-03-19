@@ -1,18 +1,13 @@
 #include "Gun.h"
-#include "Solider.h"
-#include "iostream"
-
-void test()
-{
-    Solider sanduo("xusanduo");
-    sanduo.addGun(new Gun("AK47"));
-    sanduo.addBullectToGun(20);
-    sanduo.fire();
-}
-
-int main(int argc, char const *argv[])
-{
-    std::cout << "this is a test stating" << std::endl;
-    test();
+#include "Soldier.h"
+#include <iostream>
+int main(int argc, char const* argv[]) {
+    std::cout << "Hello World!" << std::endl;
+    Gun* ptr_gun = new Gun(10, "AK-47");
+    Soldier* ptr_soldier = new Soldier("John", ptr_gun);
+    for (auto i = 0; i < 11; i++) {
+        ptr_soldier->fire();
+    }
+    ptr_soldier->addBulletToGun(5);
     return 0;
 }

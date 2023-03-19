@@ -24,8 +24,8 @@
             "args": []
         },
         {
-            "label": "build",
-            "dependsOrder": "sequence",
+            "label": "build",//这个任务是组合任务，依赖于cmake和make
+            "dependsOrder": "sequence",//按列出的顺序执行
             "dependsOn": [
                 "cmake",
                 "make"

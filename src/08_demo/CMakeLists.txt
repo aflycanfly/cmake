@@ -1,12 +1,14 @@
-# 指定cmake版本
+#cmake版本
 cmake_minimum_required(VERSION 3.0)
-# 设置项目名称
-project(SOLIDERFIRE)
-# 添加编译参数
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O2 -Wall")
-# 设置代码构建级别为 Debug 方式
-set(CMAKE_BUILD_TYPE Debug)
-# 包含目录
-include_directories(${CMAKE_SOURCE_DIR}/include)
-# 编译
-add_executable(a.out main.cpp src/Gun.cpp src/Solider.cpp)
+#项目名称
+project(SOLDIERFIRE)
+
+#CMAKE_CXX_FLAGS C++编译器选项
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g -O2 -Wall")
+set(CMake_Build_Type Debug)
+
+#include头文件目录 ${CMAKE_CURRENT_SOURCE_DIR} CMakeLists.txt所在目录
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+#生成可执行文件
+add_executable(soldierfire ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp) 
+

@@ -1,19 +1,17 @@
-#pragma once
-#include <string>
-
-class Gun
-{
-private:
-    int _bullet_count;
+#pragma once // This is a preprocessor directive that prevents the file from being included more than once
+#include <string> 
+class Gun {
+   private:
+    int _bulletCount;
     std::string _type;
 
-public:
-    Gun(std::string type)
-    {
-        this->_bullet_count = 0;
-        this->_type = type;
-    }
-
-    void addBullet(int bullet_num);
+   public:
+    Gun(int bulletCount, std::string type); 
+    void addBullets(int count);
     bool shoot();
+    
+   
 };
+
+
+
